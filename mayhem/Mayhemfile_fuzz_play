@@ -1,0 +1,9 @@
+project: savantenvs/bareiron
+target: fuzz_play
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_play/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_play
+    libfuzzer: true
+    timeout: 30
